@@ -1,0 +1,1258 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>PAL API documentation</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .parent {
+            color: #999;
+        }
+        .list-group-item > .badge {
+            float: none;
+            margin-right: 6px;
+        }
+        .panel-title > .block > .badge {
+            float: right;
+            margin-left: 5px;
+        }
+        .badge {
+            border-radius: 0;
+            text-transform: uppercase;
+            width: 60px;
+            font-weight: normal;
+            color: #f3f3f6;
+            line-height: normal;
+        }
+        .block .badge {
+            visibility: hidden;
+        }
+        .block.collapsed .badge {
+            visibility: visible;
+        }
+        .badge_get {
+            background-color: #63a8e2;
+        }
+        .badge_post {
+            background-color: #6cbd7d;
+        }
+        .badge_put {
+            background-color: #22bac4;
+        }
+        .badge_delete {
+            background-color: #d26460;
+        }
+        .block {
+            display: block;
+        }
+        .list-group, .panel-group {
+            margin-bottom: 0;
+        }
+        .panel-group .panel+.panel-white {
+            margin-top: 0;
+        }
+        .panel-group .panel-white {
+            border-bottom: 1px solid #F5F5F5;
+            border-radius: 0;
+        }
+        .panel-white:last-child {
+            border-bottom-color: white;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        .panel-white .panel-heading {
+            background: white;
+        }
+        .tab-pane ul {
+            padding-left: 2em;
+        }
+        .tab-pane h2 {
+            font-size: 1.2em;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ddd;
+        }
+        .tab-pane h3 {
+            font-size: 1.1em;
+        }
+        .tab-content {
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+        }
+        #sidebar {
+            margin-top: 30px;
+        }
+        .resource-description {
+            border-bottom: 1px solid #ddd;
+            background: #fcfcfc;
+            padding: 15px 15px 0 15px;
+            margin: -15px -15px 10px -15px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#sidebar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <div class="page-header">
+                    <h1>PAL API documentation <small>version v1</small></h1>
+                    <p>http://pal.host</p>
+
+                    
+                </div>
+
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="__config" class="panel-title">/_config</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel___config">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent"></span>/_config
+            </a>
+        </h4>
+    </div>
+    <div id="panel___config" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#__config_get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Retrieve the status of a pal instance. Provides the same response as /healthcheck
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="__config_get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent"></span>/_config
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Retrieve the status of a pal instance. Provides the same response as /healthcheck</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#__config_get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#__config_get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="__config_get_request">
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="__config_get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  &quot;name&quot;: &quot;pal-server&quot;,
+  &quot;version&quot;: &quot;0.123.16-651&quot;,
+  &quot;uptime&quot;: 510716465,
+  &quot;env&quot;: {
+    &quot;COUCHDB_URL&quot;: &quot;http://10.60.162.43:5984,http://10.60.162.44:5984&quot;,
+    &quot;LOGTOP&quot;: &quot;/var/log&quot;,
+    &quot;CUSTOMER&quot;: &quot;CNN&quot;,
+    &quot;OLDPWD&quot;: &quot;/etc/sv/cnn-pal&quot;,
+    &quot;USER&quot;: &quot;www-data&quot;,
+    &quot;STATIC_FILE_URL&quot;: &quot;http://cnn-static-domestic.stage.56m.dmtio.net&quot;,
+    &quot;REDIS_URL&quot;: &quot;http://10.60.162.41:6379,http://10.60.162.42:64001&quot;,
+    &quot;SERIAL&quot;: &quot;b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf&quot;,
+    &quot;PRODTOP&quot;: &quot;/opt&quot;,
+    &quot;PACKAGE_SIZE&quot;: &quot;2x4x32-kvm&quot;,
+    &quot;OWNER&quot;: &quot;ictops&quot;,
+    &quot;PATH&quot;: &quot;/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin&quot;,
+    &quot;PWD&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;HEALTHCHECK&quot;: &quot;/healthcheck&quot;,
+    &quot;ENVIRONMENT&quot;: &quot;stage&quot;,
+    &quot;HOME&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;SHLVL&quot;: &quot;0&quot;,
+    &quot;CONFTAG&quot;: &quot;PROD&quot;,
+    &quot;CHASSIS&quot;: &quot;SDC_VIRTUAL&quot;,
+    &quot;PRODUCT&quot;: &quot;cnn-pal&quot;,
+    &quot;TYPE&quot;: &quot;deployit&quot;,
+    &quot;PORT&quot;: &quot;5000&quot;,
+    &quot;IBIS_URL&quot;: &quot;http://cnn-ibis.stage.56m.dmtio.net&quot;,
+    &quot;LOCATION&quot;: &quot;56m&quot;,
+    &quot;DEBUG&quot;: &quot;pal-server*&quot;
+  },
+  &quot;ttl&quot;:&quot;60000 ms&quot;
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_healthcheck" class="panel-title">/healthcheck</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__healthcheck">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent"></span>/healthcheck
+            </a>
+        </h4>
+    </div>
+    <div id="panel__healthcheck" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_healthcheck_get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Retrieve the status of a pal instance. Provides the same response as /_config
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_healthcheck_get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent"></span>/healthcheck
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Retrieve the status of a pal instance. Provides the same response as /_config</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_healthcheck_get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_healthcheck_get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_healthcheck_get_request">
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_healthcheck_get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  &quot;name&quot;: &quot;pal-server&quot;,
+  &quot;version&quot;: &quot;0.123.16-651&quot;,
+  &quot;uptime&quot;: 510716465,
+  &quot;env&quot;: {
+    &quot;COUCHDB_URL&quot;: &quot;http://10.60.162.43:5984,http://10.60.162.44:5984&quot;,
+    &quot;LOGTOP&quot;: &quot;/var/log&quot;,
+    &quot;CUSTOMER&quot;: &quot;CNN&quot;,
+    &quot;OLDPWD&quot;: &quot;/etc/sv/cnn-pal&quot;,
+    &quot;USER&quot;: &quot;www-data&quot;,
+    &quot;STATIC_FILE_URL&quot;: &quot;http://cnn-static-domestic.stage.56m.dmtio.net&quot;,
+    &quot;REDIS_URL&quot;: &quot;http://10.60.162.41:6379,http://10.60.162.42:64001&quot;,
+    &quot;SERIAL&quot;: &quot;b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf&quot;,
+    &quot;PRODTOP&quot;: &quot;/opt&quot;,
+    &quot;PACKAGE_SIZE&quot;: &quot;2x4x32-kvm&quot;,
+    &quot;OWNER&quot;: &quot;ictops&quot;,
+    &quot;PATH&quot;: &quot;/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin&quot;,
+    &quot;PWD&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;HEALTHCHECK&quot;: &quot;/healthcheck&quot;,
+    &quot;ENVIRONMENT&quot;: &quot;stage&quot;,
+    &quot;HOME&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;SHLVL&quot;: &quot;0&quot;,
+    &quot;CONFTAG&quot;: &quot;PROD&quot;,
+    &quot;CHASSIS&quot;: &quot;SDC_VIRTUAL&quot;,
+    &quot;PRODUCT&quot;: &quot;cnn-pal&quot;,
+    &quot;TYPE&quot;: &quot;deployit&quot;,
+    &quot;PORT&quot;: &quot;5000&quot;,
+    &quot;IBIS_URL&quot;: &quot;http://cnn-ibis.stage.56m.dmtio.net&quot;,
+    &quot;LOCATION&quot;: &quot;56m&quot;,
+    &quot;DEBUG&quot;: &quot;pal-server*&quot;
+  },
+  &quot;ttl&quot;:&quot;60000 ms&quot;
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_article" class="panel-title">/article</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article">
+                
+                <span class="parent"></span>/article
+            </a>
+        </h4>
+    </div>
+    <div id="panel__article" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__uri__">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/article</span>/{edition}/v1/videos/{uri}/
+            </a>
+        </h4>
+    </div>
+    <div id="panel__article__edition__v1_videos__uri__" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__uri___get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Retrieve a template model for a video.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_article__edition__v1_videos__uri___get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/article</span>/{edition}/v1/videos/{uri}/
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Retrieve a template model for a video.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_article__edition__v1_videos__uri___get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_article__edition__v1_videos__uri___get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_article__edition__v1_videos__uri___get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>uri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_article__edition__v1_videos__uri___get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  adType: &quot;yes&quot;,
+  ads: {},
+  analytics: {},
+  autoStartVideo: true,
+  background: { },
+  branding: {},
+  byline: &quot;&quot;,
+  bylineLabel: &quot;&quot;,
+  canonicalUrl: &quot;http://www.cnn.com/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn&quot;,
+  currentVideoCollection: [],
+  dateCreated: &quot;February 13, 2014&quot;,
+  description: &quot;&quot;,
+  descriptionText: [ ],
+  edition: &quot;domestic&quot;,
+  env: &quot;ref&quot;,
+  firstPublishDate: &quot;2014-02-13T23:16:13Z&quot;,
+  lastPublishDate: &quot;2014-02-13T23:16:13Z&quot;,
+  lastPublishDateFormatted: &quot;&quot;,
+  lastPublishDateHKFormatted: &quot;&quot;,
+  layout: &quot;left-rail-short&quot;,
+  livefyre: {},
+  logo: { },
+  metaImage: &quot;http://cnn-ref-cms3-dist-dam1.56m.vgtf.net:8080/dam/assets//140213181555-hazy-shade-of-winter-00002001-full-169.jpg&quot;,
+  metaKeywords: &quot;showbiz, Hazy Shade of Winter&quot;,
+  nav: {},
+  ogType: &quot;video.other&quot;,
+  pageContents: [],
+  pageTheme: &quot;blue&quot;,
+  pageType: &quot;video&quot;,
+  partner: { },
+  schemaVersion: 2,
+  sectionName: &quot;videos&quot;,
+  seoTitle: &quot;Hazy Shade of Winter&quot;,
+  show: &quot;&quot;,
+  showName: &quot;&quot;,
+  showUrl: &quot;&quot;,
+  socialCommenting: true,
+  socialLogin: true,
+  socialNewsfeed: false,
+  socialSharebar: true,
+  socialTrending: false,
+  status: 200,
+  title: &quot;Hazy Shade of Winter&quot;,
+  type: &quot;page&quot;,
+  videoIdForOg: &quot;/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn&quot;,
+  sourceName: &quot;CNN&quot;,
+  pageOhDear: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 404,
+  key: &quot;/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/&quot;,
+  message: &quot;File not found&quot;,
+  responseMilliSeconds: 18,
+  type: &quot;page&quot;,
+  env: &quot;ref&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 500,
+  key: &quot;/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/&quot;,
+  message: &quot;Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND &quot;,
+  responseMilliSeconds: 18,
+  type: &quot;page&quot;,
+  env: &quot;ref&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__uri__video_playlists__uri__">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/article</span>/{edition}/v1/videos/{uri}/video/playlists/{uri}/
+            </a>
+        </h4>
+    </div>
+    <div id="panel__article__edition__v1_videos__uri__video_playlists__uri__" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__uri__video_playlists__uri___get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Retrieve a template model for a video with the associated video collection.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_article__edition__v1_videos__uri__video_playlists__uri___get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/article</span>/{edition}/v1/videos/{uri}/video/playlists/{uri}/
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Retrieve a template model for a video with the associated video collection.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_article__edition__v1_videos__uri__video_playlists__uri___get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_article__edition__v1_videos__uri__video_playlists__uri___get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_article__edition__v1_videos__uri__video_playlists__uri___get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>uri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_article__edition__v1_videos__uri__video_playlists__uri___get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  adType: &quot;yes&quot;,
+  ads: {},
+  analytics: {},
+  autoStartVideo: true,
+  background: { },
+  branding: {},
+  byline: &quot;&quot;,
+  bylineLabel: &quot;&quot;,
+  canonicalUrl: &quot;http://www.cnn.com/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn&quot;,
+  currentVideoCollection: [],
+  dateCreated: &quot;February 13, 2014&quot;,
+  description: &quot;&quot;,
+  descriptionText: [ ],
+  edition: &quot;domestic&quot;,
+  env: &quot;ref&quot;,
+  firstPublishDate: &quot;2014-02-13T23:16:13Z&quot;,
+  lastPublishDate: &quot;2014-02-13T23:16:13Z&quot;,
+  lastPublishDateFormatted: &quot;&quot;,
+  lastPublishDateHKFormatted: &quot;&quot;,
+  layout: &quot;left-rail-short&quot;,
+  livefyre: {},
+  logo: { },
+  metaImage: &quot;http://cnn-ref-cms3-dist-dam1.56m.vgtf.net:8080/dam/assets//140213181555-hazy-shade-of-winter-00002001-full-169.jpg&quot;,
+  metaKeywords: &quot;showbiz, Hazy Shade of Winter&quot;,
+  nav: {},
+  ogType: &quot;video.other&quot;,
+  pageContents: [],
+  pageTheme: &quot;blue&quot;,
+  pageType: &quot;video&quot;,
+  partner: { },
+  schemaVersion: 2,
+  sectionName: &quot;videos&quot;,
+  seoTitle: &quot;Hazy Shade of Winter&quot;,
+  show: &quot;&quot;,
+  showName: &quot;&quot;,
+  showUrl: &quot;&quot;,
+  socialCommenting: true,
+  socialLogin: true,
+  socialNewsfeed: false,
+  socialSharebar: true,
+  socialTrending: false,
+  status: 200,
+  title: &quot;Hazy Shade of Winter&quot;,
+  type: &quot;page&quot;,
+  videoIdForOg: &quot;/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn&quot;,
+  sourceName: &quot;CNN&quot;,
+  pageOhDear: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 404,
+  key: &quot;/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/&quot;,
+  message: &quot;File not found&quot;,
+  responseMilliSeconds: 18,
+  type: &quot;page&quot;,
+  env: &quot;ref&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 500,
+  key: &quot;/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/&quot;,
+  message: &quot;Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND &quot;,
+  responseMilliSeconds: 18,
+  type: &quot;page&quot;,
+  env: &quot;ref&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1__uri__">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/article</span>/{edition}/v1/{uri}/
+            </a>
+        </h4>
+    </div>
+    <div id="panel__article__edition__v1__uri__" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1__uri___get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Retrieve a template model for an article or full page gallery.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_article__edition__v1__uri___get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/article</span>/{edition}/v1/{uri}/
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Retrieve a template model for an article or full page gallery.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_article__edition__v1__uri___get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_article__edition__v1__uri___get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_article__edition__v1__uri___get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>uri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_article__edition__v1__uri___get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  adType: &quot;Normal&quot;,
+  ads: {},
+  analytics: {},
+  autoStartVideo: false,
+  background: {},
+  branding: {},
+  byline: &quot;Greg Botelho, Marie-Louise Gumuchian and Nick Paton Walsh, CNN&quot;,
+  bylineLabel: &quot;By&quot;,
+  canonicalUrl: &quot;http://www.cnn.com/2014/03/13/europe/ukraine-crisis/index.html&quot;,
+  currentVideoCollection: [ ],
+  dateCreated: &quot;&quot;,
+  description: &quot;Moments after blasting what he called Russia&#x27;s illegal &quot;military aggression&quot; of his nation, Ukraine&#x27;s interim leader insisted Thursday that a peaceful resolution that ends with Kiev and Moscow becoming &quot;real partners&quot; is still possible.&quot;,
+  descriptionText: [ ],
+  edition: &quot;domestic&quot;,
+  env: &quot;dev&quot;,
+  firstPublishDate: &quot;2014-03-13T22:39:56Z&quot;,
+  lastPublishDate: &quot;2014-03-24T20:23:46Z&quot;,
+  lastPublishDateFormatted: &quot;3:23 PM ET, Mon March 24, 2014&quot;,
+  lastPublishDateHKFormatted: &quot;&quot;,
+  layout: &quot;left-rail-tall&quot;,
+  livefyre: {},
+  logo: {},
+  metaKeywords: &quot;europe, As Russian troops stage drills nearby, Ukraine leader says peace is still possible&quot;,
+  nav: {},
+  ogType: &quot;article&quot;,
+  pageContents: [],
+  pageTheme: &quot;white&quot;,
+  pageType: &quot;article&quot;,
+  partner: { },
+  schemaVersion: 2,
+  sectionName: &quot;europe&quot;,
+  seoTitle: &quot;As Russian troops stage drills nearby, Ukraine leader says peace is still possible&quot;,
+  show: &quot;&quot;,
+  showName: &quot;&quot;,
+  showUrl: &quot;&quot;,
+  socialCommenting: true,
+  socialLogin: true,
+  socialNewsfeed: false,
+  socialSharebar: true,
+  socialTrending: false,
+  status: 200,
+  title: &quot;As Russian troops stage drills nearby, Ukraine leader says peace is still possible&quot;,
+  type: &quot;page&quot;,
+  videoIdForOg: &quot;&quot;,
+  pageOhDear: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 404,
+  key: &quot;/2014/03/13/europe/ukraine-crisis-1/index.html&quot;,
+  message: &quot;File not found&quot;,
+  responseMilliSeconds: 42,
+  type: &quot;page&quot;,
+  env: &quot;dev&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 500,
+  key: &quot;/2014/03/13/europe/ukraine-crisis/index.html&quot;,
+  message: &quot;Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND &quot;,
+  responseMilliSeconds: 52,
+  type: &quot;page&quot;,
+  env: &quot;local&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_video" class="panel-title">/video</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__video">
+                
+                <span class="parent"></span>/video
+            </a>
+        </h4>
+    </div>
+    <div id="panel__video" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_videos" class="panel-title">/videos</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__videos">
+                
+                <span class="parent"></span>/videos
+            </a>
+        </h4>
+    </div>
+    <div id="panel__videos" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_profile" class="panel-title">/profile</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__profile">
+                
+                <span class="parent"></span>/profile
+            </a>
+        </h4>
+    </div>
+    <div id="panel__profile" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_section" class="panel-title">/section</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__section">
+                
+                <span class="parent"></span>/section
+            </a>
+        </h4>
+    </div>
+    <div id="panel__section" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_list" class="panel-title">/list</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__list">
+                
+                <span class="parent"></span>/list
+            </a>
+        </h4>
+    </div>
+    <div id="panel__list" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_show" class="panel-title">/show</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__show">
+                
+                <span class="parent"></span>/show
+            </a>
+        </h4>
+    </div>
+    <div id="panel__show" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="col-md-3">
+                <div id="sidebar" class="hidden-print affix" role="complementary">
+                    <ul class="nav nav-pills nav-stacked">
+                        
+                            <li><a href="#__config">/_config</a></li>
+                        
+                            <li><a href="#_healthcheck">/healthcheck</a></li>
+                        
+                            <li><a href="#_article">/article</a></li>
+                        
+                            <li><a href="#_video">/video</a></li>
+                        
+                            <li><a href="#_videos">/videos</a></li>
+                        
+                            <li><a href="#_profile">/profile</a></li>
+                        
+                            <li><a href="#_section">/section</a></li>
+                        
+                            <li><a href="#_list">/list</a></li>
+                        
+                            <li><a href="#_show">/show</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

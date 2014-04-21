@@ -1,0 +1,389 @@
+#%RAML 0.8
+title: PAL
+baseUri: http://pal.host
+version: v1
+
+/_config:
+  get:
+    description: Retrieve the status of a pal instance. Provides the same response as /healthcheck
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "name": "pal-server",
+                "version": "0.123.16-651",
+                "uptime": 510716465,
+                "env": {
+                  "COUCHDB_URL": "http://10.60.162.43:5984,http://10.60.162.44:5984",
+                  "LOGTOP": "/var/log",
+                  "CUSTOMER": "CNN",
+                  "OLDPWD": "/etc/sv/cnn-pal",
+                  "USER": "www-data",
+                  "STATIC_FILE_URL": "http://cnn-static-domestic.stage.56m.dmtio.net",
+                  "REDIS_URL": "http://10.60.162.41:6379,http://10.60.162.42:64001",
+                  "SERIAL": "b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf",
+                  "PRODTOP": "/opt",
+                  "PACKAGE_SIZE": "2x4x32-kvm",
+                  "OWNER": "ictops",
+                  "PATH": "/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin",
+                  "PWD": "/opt/cnn-pal/current",
+                  "HEALTHCHECK": "/healthcheck",
+                  "ENVIRONMENT": "stage",
+                  "HOME": "/opt/cnn-pal/current",
+                  "SHLVL": "0",
+                  "CONFTAG": "PROD",
+                  "CHASSIS": "SDC_VIRTUAL",
+                  "PRODUCT": "cnn-pal",
+                  "TYPE": "deployit",
+                  "PORT": "5000",
+                  "IBIS_URL": "http://cnn-ibis.stage.56m.dmtio.net",
+                  "LOCATION": "56m",
+                  "DEBUG": "pal-server*"
+                },
+                "ttl":"60000 ms"
+              }
+/healthcheck:
+  get:
+    description: Retrieve the status of a pal instance. Provides the same response as /_config
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "name": "pal-server",
+                "version": "0.123.16-651",
+                "uptime": 510716465,
+                "env": {
+                  "COUCHDB_URL": "http://10.60.162.43:5984,http://10.60.162.44:5984",
+                  "LOGTOP": "/var/log",
+                  "CUSTOMER": "CNN",
+                  "OLDPWD": "/etc/sv/cnn-pal",
+                  "USER": "www-data",
+                  "STATIC_FILE_URL": "http://cnn-static-domestic.stage.56m.dmtio.net",
+                  "REDIS_URL": "http://10.60.162.41:6379,http://10.60.162.42:64001",
+                  "SERIAL": "b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf",
+                  "PRODTOP": "/opt",
+                  "PACKAGE_SIZE": "2x4x32-kvm",
+                  "OWNER": "ictops",
+                  "PATH": "/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin",
+                  "PWD": "/opt/cnn-pal/current",
+                  "HEALTHCHECK": "/healthcheck",
+                  "ENVIRONMENT": "stage",
+                  "HOME": "/opt/cnn-pal/current",
+                  "SHLVL": "0",
+                  "CONFTAG": "PROD",
+                  "CHASSIS": "SDC_VIRTUAL",
+                  "PRODUCT": "cnn-pal",
+                  "TYPE": "deployit",
+                  "PORT": "5000",
+                  "IBIS_URL": "http://cnn-ibis.stage.56m.dmtio.net",
+                  "LOCATION": "56m",
+                  "DEBUG": "pal-server*"
+                },
+                "ttl":"60000 ms"
+              }
+/article:
+    /{edition}/v1/videos/{uri}/:
+      get:
+        description: Retrieve a template model for a video.
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+                  {
+                    adType: "yes",
+                    ads: {},
+                    analytics: {},
+                    autoStartVideo: true,
+                    background: { },
+                    branding: {},
+                    byline: "",
+                    bylineLabel: "",
+                    canonicalUrl: "http://www.cnn.com/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn",
+                    currentVideoCollection: [],
+                    dateCreated: "February 13, 2014",
+                    description: "",
+                    descriptionText: [ ],
+                    edition: "domestic",
+                    env: "ref",
+                    firstPublishDate: "2014-02-13T23:16:13Z",
+                    lastPublishDate: "2014-02-13T23:16:13Z",
+                    lastPublishDateFormatted: "",
+                    lastPublishDateHKFormatted: "",
+                    layout: "left-rail-short",
+                    livefyre: {},
+                    logo: { },
+                    metaImage: "http://cnn-ref-cms3-dist-dam1.56m.vgtf.net:8080/dam/assets//140213181555-hazy-shade-of-winter-00002001-full-169.jpg",
+                    metaKeywords: "showbiz, Hazy Shade of Winter",
+                    nav: {},
+                    ogType: "video.other",
+                    pageContents: [],
+                    pageTheme: "blue",
+                    pageType: "video",
+                    partner: { },
+                    schemaVersion: 2,
+                    sectionName: "videos",
+                    seoTitle: "Hazy Shade of Winter",
+                    show: "",
+                    showName: "",
+                    showUrl: "",
+                    socialCommenting: true,
+                    socialLogin: true,
+                    socialNewsfeed: false,
+                    socialSharebar: true,
+                    socialTrending: false,
+                    status: 200,
+                    title: "Hazy Shade of Winter",
+                    type: "page",
+                    videoIdForOg: "/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn",
+                    sourceName: "CNN",
+                    pageOhDear: {}
+                  }
+          404:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 404,
+                    key: "/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/",
+                    message: "File not found",
+                    responseMilliSeconds: 18,
+                    type: "page",
+                    env: "ref",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+          500:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 500,
+                    key: "/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/",
+                    message: "Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND ",
+                    responseMilliSeconds: 18,
+                    type: "page",
+                    env: "ref",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+    /{edition}/v1/videos/{uri}/video/playlists/{uri}/:
+      get:
+        description: Retrieve a template model for a video with the associated video collection.
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+                  {
+                    adType: "yes",
+                    ads: {},
+                    analytics: {},
+                    autoStartVideo: true,
+                    background: { },
+                    branding: {},
+                    byline: "",
+                    bylineLabel: "",
+                    canonicalUrl: "http://www.cnn.com/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn",
+                    currentVideoCollection: [],
+                    dateCreated: "February 13, 2014",
+                    description: "",
+                    descriptionText: [ ],
+                    edition: "domestic",
+                    env: "ref",
+                    firstPublishDate: "2014-02-13T23:16:13Z",
+                    lastPublishDate: "2014-02-13T23:16:13Z",
+                    lastPublishDateFormatted: "",
+                    lastPublishDateHKFormatted: "",
+                    layout: "left-rail-short",
+                    livefyre: {},
+                    logo: { },
+                    metaImage: "http://cnn-ref-cms3-dist-dam1.56m.vgtf.net:8080/dam/assets//140213181555-hazy-shade-of-winter-00002001-full-169.jpg",
+                    metaKeywords: "showbiz, Hazy Shade of Winter",
+                    nav: {},
+                    ogType: "video.other",
+                    pageContents: [],
+                    pageTheme: "blue",
+                    pageType: "video",
+                    partner: { },
+                    schemaVersion: 2,
+                    sectionName: "videos",
+                    seoTitle: "Hazy Shade of Winter",
+                    show: "",
+                    showName: "",
+                    showUrl: "",
+                    socialCommenting: true,
+                    socialLogin: true,
+                    socialNewsfeed: false,
+                    socialSharebar: true,
+                    socialTrending: false,
+                    status: 200,
+                    title: "Hazy Shade of Winter",
+                    type: "page",
+                    videoIdForOg: "/videos/showbiz/2014/02/13/hazy-shade-of-winter.cnn",
+                    sourceName: "CNN",
+                    pageOhDear: {}
+                  }
+          404:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 404,
+                    key: "/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/",
+                    message: "File not found",
+                    responseMilliSeconds: 18,
+                    type: "page",
+                    env: "ref",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+          500:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 500,
+                    key: "/video/data/3.0/video/showbiz/2014/02/13/hazy-shade-of-winter.cnn1/index.xml/video/playlists/great-cover-songs-collection/",
+                    message: "Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND ",
+                    responseMilliSeconds: 18,
+                    type: "page",
+                    env: "ref",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+    /{edition}/v1/{uri}/:
+      get:
+        description: Retrieve a template model for an article or full page gallery.
+        responses:
+          200:
+            body:
+              application/json:
+                example: |
+                  {
+                    adType: "Normal",
+                    ads: {},
+                    analytics: {},
+                    autoStartVideo: false,
+                    background: {},
+                    branding: {},
+                    byline: "Greg Botelho, Marie-Louise Gumuchian and Nick Paton Walsh, CNN",
+                    bylineLabel: "By",
+                    canonicalUrl: "http://www.cnn.com/2014/03/13/europe/ukraine-crisis/index.html",
+                    currentVideoCollection: [ ],
+                    dateCreated: "",
+                    description: "Moments after blasting what he called Russia's illegal "military aggression" of his nation, Ukraine's interim leader insisted Thursday that a peaceful resolution that ends with Kiev and Moscow becoming "real partners" is still possible.",
+                    descriptionText: [ ],
+                    edition: "domestic",
+                    env: "dev",
+                    firstPublishDate: "2014-03-13T22:39:56Z",
+                    lastPublishDate: "2014-03-24T20:23:46Z",
+                    lastPublishDateFormatted: "3:23 PM ET, Mon March 24, 2014",
+                    lastPublishDateHKFormatted: "",
+                    layout: "left-rail-tall",
+                    livefyre: {},
+                    logo: {},
+                    metaKeywords: "europe, As Russian troops stage drills nearby, Ukraine leader says peace is still possible",
+                    nav: {},
+                    ogType: "article",
+                    pageContents: [],
+                    pageTheme: "white",
+                    pageType: "article",
+                    partner: { },
+                    schemaVersion: 2,
+                    sectionName: "europe",
+                    seoTitle: "As Russian troops stage drills nearby, Ukraine leader says peace is still possible",
+                    show: "",
+                    showName: "",
+                    showUrl: "",
+                    socialCommenting: true,
+                    socialLogin: true,
+                    socialNewsfeed: false,
+                    socialSharebar: true,
+                    socialTrending: false,
+                    status: 200,
+                    title: "As Russian troops stage drills nearby, Ukraine leader says peace is still possible",
+                    type: "page",
+                    videoIdForOg: "",
+                    pageOhDear: {}
+                  }
+          404:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 404,
+                    key: "/2014/03/13/europe/ukraine-crisis-1/index.html",
+                    message: "File not found",
+                    responseMilliSeconds: 42,
+                    type: "page",
+                    env: "dev",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+          500:
+            body:
+              application/json:
+                example: |
+                  {
+                    status: 500,
+                    key: "/2014/03/13/europe/ukraine-crisis/index.html",
+                    message: "Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND ",
+                    responseMilliSeconds: 52,
+                    type: "page",
+                    env: "local",
+                    edition: "domestic",
+                    location: "",
+                    description: "",
+                    layout: "no-rail",
+                    pageType: "section",
+                    sectionName: "",
+                    seoTitle: "",
+                    editorialSource: "",
+                    nav: {}
+                  }
+/video:
+/videos:
+/profile:
+/section:
+/list:
+/show:
