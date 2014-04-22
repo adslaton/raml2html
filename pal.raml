@@ -5,48 +5,7 @@ version: v1
 
 /_config:
   get:
-    description: Retrieve the status of a pal instance. Provides the same response as /healthcheck
-    responses:
-      200:
-        body:
-          application/json:
-            example: |
-              {
-                "name": "pal-server",
-                "version": "0.123.16-651",
-                "uptime": 510716465,
-                "env": {
-                  "COUCHDB_URL": "http://10.60.162.43:5984,http://10.60.162.44:5984",
-                  "LOGTOP": "/var/log",
-                  "CUSTOMER": "CNN",
-                  "OLDPWD": "/etc/sv/cnn-pal",
-                  "USER": "www-data",
-                  "STATIC_FILE_URL": "http://cnn-static-domestic.stage.56m.dmtio.net",
-                  "REDIS_URL": "http://10.60.162.41:6379,http://10.60.162.42:64001",
-                  "SERIAL": "b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf",
-                  "PRODTOP": "/opt",
-                  "PACKAGE_SIZE": "2x4x32-kvm",
-                  "OWNER": "ictops",
-                  "PATH": "/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin",
-                  "PWD": "/opt/cnn-pal/current",
-                  "HEALTHCHECK": "/healthcheck",
-                  "ENVIRONMENT": "stage",
-                  "HOME": "/opt/cnn-pal/current",
-                  "SHLVL": "0",
-                  "CONFTAG": "PROD",
-                  "CHASSIS": "SDC_VIRTUAL",
-                  "PRODUCT": "cnn-pal",
-                  "TYPE": "deployit",
-                  "PORT": "5000",
-                  "IBIS_URL": "http://cnn-ibis.stage.56m.dmtio.net",
-                  "LOCATION": "56m",
-                  "DEBUG": "pal-server*"
-                },
-                "ttl":"60000 ms"
-              }
-/healthcheck:
-  get:
-    description: Retrieve the status of a pal instance. Provides the same response as /_config
+    description: Request the status of a pal instance. Provides the same response as /healthcheck.
     responses:
       200:
         body:
@@ -86,9 +45,9 @@ version: v1
                 "ttl":"60000 ms"
               }
 /article:
-    /{edition}/v1/videos/{uri}/:
+    /{edition}/v1/videos/{articleUri}/:
       get:
-        description: Retrieve a template model for a video.
+        description: Request a template model for a video object.
         responses:
           200:
             body:
@@ -185,9 +144,9 @@ version: v1
                     editorialSource: "",
                     nav: {}
                   }
-    /{edition}/v1/videos/{uri}/video/playlists/{uri}/:
+    /{edition}/v1/videos/{videoUri}/video/playlists/{videoCollectionUri}/:
       get:
-        description: Retrieve a template model for a video with the associated video collection.
+        description: Request a template model for a video with the associated video collection.
         responses:
           200:
             body:
@@ -284,9 +243,9 @@ version: v1
                     editorialSource: "",
                     nav: {}
                   }
-    /{edition}/v1/{uri}/:
+    /{edition}/v1/{articleUri}/:
       get:
-        description: Retrieve a template model for an article or full page gallery.
+        description: Request a template model for an article object, full page gallery object, or audio object.
         responses:
           200:
             body:
@@ -381,9 +340,76 @@ version: v1
                     editorialSource: "",
                     nav: {}
                   }
-/video:
-/videos:
-/profile:
-/section:
+/healthcheck:
+  get:
+    description: Request the status of a pal instance. Provides the same response as /_config.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "name": "pal-server",
+                "version": "0.123.16-651",
+                "uptime": 510716465,
+                "env": {
+                  "COUCHDB_URL": "http://10.60.162.43:5984,http://10.60.162.44:5984",
+                  "LOGTOP": "/var/log",
+                  "CUSTOMER": "CNN",
+                  "OLDPWD": "/etc/sv/cnn-pal",
+                  "USER": "www-data",
+                  "STATIC_FILE_URL": "http://cnn-static-domestic.stage.56m.dmtio.net",
+                  "REDIS_URL": "http://10.60.162.41:6379,http://10.60.162.42:64001",
+                  "SERIAL": "b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf",
+                  "PRODTOP": "/opt",
+                  "PACKAGE_SIZE": "2x4x32-kvm",
+                  "OWNER": "ictops",
+                  "PATH": "/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin",
+                  "PWD": "/opt/cnn-pal/current",
+                  "HEALTHCHECK": "/healthcheck",
+                  "ENVIRONMENT": "stage",
+                  "HOME": "/opt/cnn-pal/current",
+                  "SHLVL": "0",
+                  "CONFTAG": "PROD",
+                  "CHASSIS": "SDC_VIRTUAL",
+                  "PRODUCT": "cnn-pal",
+                  "TYPE": "deployit",
+                  "PORT": "5000",
+                  "IBIS_URL": "http://cnn-ibis.stage.56m.dmtio.net",
+                  "LOCATION": "56m",
+                  "DEBUG": "pal-server*"
+                },
+                "ttl":"60000 ms"
+              }
 /list:
+  /{edition}/v1/{listUri}:
+    get:
+      description: Request a template model for a list (topic) object.
+      responses:
+        200:
+        404:
+        500:
+/profile:
+  /{edition}/v1/{profileUri}:
+    get:
+      description: Request a template model for a profile object.
+      responses:
+        200:
+        404:
+        500:
+/section:
+  /{edition}/v1/{sectionName}:
+    get:
+      description: Request a template model for a section object.
+      responses:
+        200:
+        404:
+        500:
 /show:
+  /{edition}/v1/{showUri}:
+    get:
+      description: Request a template model for a show object.
+      responses:
+        200:
+        404:
+        500:

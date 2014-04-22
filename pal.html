@@ -134,7 +134,7 @@
                 
                     <a href="#" data-toggle="modal" data-target="#__config_get" class="list-group-item">
                         <span class="badge badge_get">get</span>
-                        Retrieve the status of a pal instance. Provides the same response as /healthcheck
+                        Request the status of a pal instance. Provides the same response as /healthcheck.
                     </a>
                 
             </div>
@@ -153,7 +153,7 @@
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <div class="alert alert-info"><p>Retrieve the status of a pal instance. Provides the same response as /healthcheck</p>
+                        <div class="alert alert-info"><p>Request the status of a pal instance. Provides the same response as /healthcheck.</p>
 </div>
 
                         <!-- Nav tabs -->
@@ -176,137 +176,6 @@
 
                             
                                 <div class="tab-pane" id="__config_get_response">
-                                    
-                                        <h2>HTTP status code 200</h2>
-                                        
-
-                                        
-
-                                        
-                                            <h3>Body</h3>
-                                            
-                                                <p><strong>Type: application/json</strong></p>
-                                                <pre>{
-  &quot;name&quot;: &quot;pal-server&quot;,
-  &quot;version&quot;: &quot;0.123.16-651&quot;,
-  &quot;uptime&quot;: 510716465,
-  &quot;env&quot;: {
-    &quot;COUCHDB_URL&quot;: &quot;http://10.60.162.43:5984,http://10.60.162.44:5984&quot;,
-    &quot;LOGTOP&quot;: &quot;/var/log&quot;,
-    &quot;CUSTOMER&quot;: &quot;CNN&quot;,
-    &quot;OLDPWD&quot;: &quot;/etc/sv/cnn-pal&quot;,
-    &quot;USER&quot;: &quot;www-data&quot;,
-    &quot;STATIC_FILE_URL&quot;: &quot;http://cnn-static-domestic.stage.56m.dmtio.net&quot;,
-    &quot;REDIS_URL&quot;: &quot;http://10.60.162.41:6379,http://10.60.162.42:64001&quot;,
-    &quot;SERIAL&quot;: &quot;b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf&quot;,
-    &quot;PRODTOP&quot;: &quot;/opt&quot;,
-    &quot;PACKAGE_SIZE&quot;: &quot;2x4x32-kvm&quot;,
-    &quot;OWNER&quot;: &quot;ictops&quot;,
-    &quot;PATH&quot;: &quot;/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin&quot;,
-    &quot;PWD&quot;: &quot;/opt/cnn-pal/current&quot;,
-    &quot;HEALTHCHECK&quot;: &quot;/healthcheck&quot;,
-    &quot;ENVIRONMENT&quot;: &quot;stage&quot;,
-    &quot;HOME&quot;: &quot;/opt/cnn-pal/current&quot;,
-    &quot;SHLVL&quot;: &quot;0&quot;,
-    &quot;CONFTAG&quot;: &quot;PROD&quot;,
-    &quot;CHASSIS&quot;: &quot;SDC_VIRTUAL&quot;,
-    &quot;PRODUCT&quot;: &quot;cnn-pal&quot;,
-    &quot;TYPE&quot;: &quot;deployit&quot;,
-    &quot;PORT&quot;: &quot;5000&quot;,
-    &quot;IBIS_URL&quot;: &quot;http://cnn-ibis.stage.56m.dmtio.net&quot;,
-    &quot;LOCATION&quot;: &quot;56m&quot;,
-    &quot;DEBUG&quot;: &quot;pal-server*&quot;
-  },
-  &quot;ttl&quot;:&quot;60000 ms&quot;
-}
-</pre>
-                                            
-                                        
-                                    
-                                </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-</div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 id="_healthcheck" class="panel-title">/healthcheck</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            
-
-                            <div class="panel-group">
-                                <div class="panel panel-white">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__healthcheck">
-                
-                    <span class="badge badge_get">get</span>
-                
-                <span class="parent"></span>/healthcheck
-            </a>
-        </h4>
-    </div>
-    <div id="panel__healthcheck" class="panel-collapse collapse">
-        <div class="panel-body">
-            <div class="list-group">
-                
-                    <a href="#" data-toggle="modal" data-target="#_healthcheck_get" class="list-group-item">
-                        <span class="badge badge_get">get</span>
-                        Retrieve the status of a pal instance. Provides the same response as /_config
-                    </a>
-                
-            </div>
-        </div>
-    </div>
-
-    
-        <div class="modal fade" id="_healthcheck_get">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">
-                            <span class="badge badge_get">get</span>
-                            <span class="parent"></span>/healthcheck
-                        </h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="alert alert-info"><p>Retrieve the status of a pal instance. Provides the same response as /_config</p>
-</div>
-
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#_healthcheck_get_request" data-toggle="tab">Request</a></li>
-                            
-                                <li><a href="#_healthcheck_get_response" data-toggle="tab">Response</a></li>
-                            
-                        </ul>
-
-                        <!-- Tab panes -->
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="_healthcheck_get_request">
-                                
-
-                                
-
-                                
-                            </div>
-
-                            
-                                <div class="tab-pane" id="_healthcheck_get_response">
                                     
                                         <h2>HTTP status code 200</h2>
                                         
@@ -403,21 +272,21 @@
     <div class="panel panel-white">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__uri__">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__articleUri__">
                 
                     <span class="badge badge_get">get</span>
                 
-                <span class="parent">/article</span>/{edition}/v1/videos/{uri}/
+                <span class="parent">/article</span>/{edition}/v1/videos/{articleUri}/
             </a>
         </h4>
     </div>
-    <div id="panel__article__edition__v1_videos__uri__" class="panel-collapse collapse">
+    <div id="panel__article__edition__v1_videos__articleUri__" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="list-group">
                 
-                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__uri___get" class="list-group-item">
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__articleUri___get" class="list-group-item">
                         <span class="badge badge_get">get</span>
-                        Retrieve a template model for a video.
+                        Request a template model for a video object.
                     </a>
                 
             </div>
@@ -425,38 +294,38 @@
     </div>
 
     
-        <div class="modal fade" id="_article__edition__v1_videos__uri___get">
+        <div class="modal fade" id="_article__edition__v1_videos__articleUri___get">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="myModalLabel">
                             <span class="badge badge_get">get</span>
-                            <span class="parent">/article</span>/{edition}/v1/videos/{uri}/
+                            <span class="parent">/article</span>/{edition}/v1/videos/{articleUri}/
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <div class="alert alert-info"><p>Retrieve a template model for a video.</p>
+                        <div class="alert alert-info"><p>Request a template model for a video object.</p>
 </div>
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#_article__edition__v1_videos__uri___get_request" data-toggle="tab">Request</a></li>
+                            <li class="active"><a href="#_article__edition__v1_videos__articleUri___get_request" data-toggle="tab">Request</a></li>
                             
-                                <li><a href="#_article__edition__v1_videos__uri___get_response" data-toggle="tab">Response</a></li>
+                                <li><a href="#_article__edition__v1_videos__articleUri___get_response" data-toggle="tab">Response</a></li>
                             
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane active" id="_article__edition__v1_videos__uri___get_request">
+                            <div class="tab-pane active" id="_article__edition__v1_videos__articleUri___get_request">
                                 
                                     <h3>URI Parameters</h3>
                                     <ul>
                                         
                                             <li><strong>edition</strong>: string</li>
                                         
-                                            <li><strong>uri</strong>: string</li>
+                                            <li><strong>articleUri</strong>: string</li>
                                         
                                     </ul>
                                 
@@ -467,7 +336,7 @@
                             </div>
 
                             
-                                <div class="tab-pane" id="_article__edition__v1_videos__uri___get_response">
+                                <div class="tab-pane" id="_article__edition__v1_videos__articleUri___get_response">
                                     
                                         <h2>HTTP status code 200</h2>
                                         
@@ -607,21 +476,21 @@
     <div class="panel panel-white">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__uri__video_playlists__uri__">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri__">
                 
                     <span class="badge badge_get">get</span>
                 
-                <span class="parent">/article</span>/{edition}/v1/videos/{uri}/video/playlists/{uri}/
+                <span class="parent">/article</span>/{edition}/v1/videos/{videoUri}/video/playlists/{videoCollectionUri}/
             </a>
         </h4>
     </div>
-    <div id="panel__article__edition__v1_videos__uri__video_playlists__uri__" class="panel-collapse collapse">
+    <div id="panel__article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri__" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="list-group">
                 
-                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__uri__video_playlists__uri___get" class="list-group-item">
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get" class="list-group-item">
                         <span class="badge badge_get">get</span>
-                        Retrieve a template model for a video with the associated video collection.
+                        Request a template model for a video with the associated video collection.
                     </a>
                 
             </div>
@@ -629,38 +498,40 @@
     </div>
 
     
-        <div class="modal fade" id="_article__edition__v1_videos__uri__video_playlists__uri___get">
+        <div class="modal fade" id="_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="myModalLabel">
                             <span class="badge badge_get">get</span>
-                            <span class="parent">/article</span>/{edition}/v1/videos/{uri}/video/playlists/{uri}/
+                            <span class="parent">/article</span>/{edition}/v1/videos/{videoUri}/video/playlists/{videoCollectionUri}/
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <div class="alert alert-info"><p>Retrieve a template model for a video with the associated video collection.</p>
+                        <div class="alert alert-info"><p>Request a template model for a video with the associated video collection.</p>
 </div>
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#_article__edition__v1_videos__uri__video_playlists__uri___get_request" data-toggle="tab">Request</a></li>
+                            <li class="active"><a href="#_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get_request" data-toggle="tab">Request</a></li>
                             
-                                <li><a href="#_article__edition__v1_videos__uri__video_playlists__uri___get_response" data-toggle="tab">Response</a></li>
+                                <li><a href="#_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get_response" data-toggle="tab">Response</a></li>
                             
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane active" id="_article__edition__v1_videos__uri__video_playlists__uri___get_request">
+                            <div class="tab-pane active" id="_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get_request">
                                 
                                     <h3>URI Parameters</h3>
                                     <ul>
                                         
                                             <li><strong>edition</strong>: string</li>
                                         
-                                            <li><strong>uri</strong>: string</li>
+                                            <li><strong>videoUri</strong>: string</li>
+                                        
+                                            <li><strong>videoCollectionUri</strong>: string</li>
                                         
                                     </ul>
                                 
@@ -671,7 +542,7 @@
                             </div>
 
                             
-                                <div class="tab-pane" id="_article__edition__v1_videos__uri__video_playlists__uri___get_response">
+                                <div class="tab-pane" id="_article__edition__v1_videos__videoUri__video_playlists__videoCollectionUri___get_response">
                                     
                                         <h2>HTTP status code 200</h2>
                                         
@@ -811,21 +682,21 @@
     <div class="panel panel-white">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1__uri__">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1__articleUri__">
                 
                     <span class="badge badge_get">get</span>
                 
-                <span class="parent">/article</span>/{edition}/v1/{uri}/
+                <span class="parent">/article</span>/{edition}/v1/{articleUri}/
             </a>
         </h4>
     </div>
-    <div id="panel__article__edition__v1__uri__" class="panel-collapse collapse">
+    <div id="panel__article__edition__v1__articleUri__" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="list-group">
                 
-                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1__uri___get" class="list-group-item">
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1__articleUri___get" class="list-group-item">
                         <span class="badge badge_get">get</span>
-                        Retrieve a template model for an article or full page gallery.
+                        Request a template model for an article object, full page gallery object, or audio object.
                     </a>
                 
             </div>
@@ -833,38 +704,38 @@
     </div>
 
     
-        <div class="modal fade" id="_article__edition__v1__uri___get">
+        <div class="modal fade" id="_article__edition__v1__articleUri___get">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="myModalLabel">
                             <span class="badge badge_get">get</span>
-                            <span class="parent">/article</span>/{edition}/v1/{uri}/
+                            <span class="parent">/article</span>/{edition}/v1/{articleUri}/
                         </h4>
                     </div>
                     <div class="modal-body">
-                        <div class="alert alert-info"><p>Retrieve a template model for an article or full page gallery.</p>
+                        <div class="alert alert-info"><p>Request a template model for an article object, full page gallery object, or audio object.</p>
 </div>
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#_article__edition__v1__uri___get_request" data-toggle="tab">Request</a></li>
+                            <li class="active"><a href="#_article__edition__v1__articleUri___get_request" data-toggle="tab">Request</a></li>
                             
-                                <li><a href="#_article__edition__v1__uri___get_response" data-toggle="tab">Response</a></li>
+                                <li><a href="#_article__edition__v1__articleUri___get_response" data-toggle="tab">Response</a></li>
                             
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane active" id="_article__edition__v1__uri___get_request">
+                            <div class="tab-pane active" id="_article__edition__v1__articleUri___get_request">
                                 
                                     <h3>URI Parameters</h3>
                                     <ul>
                                         
                                             <li><strong>edition</strong>: string</li>
                                         
-                                            <li><strong>uri</strong>: string</li>
+                                            <li><strong>articleUri</strong>: string</li>
                                         
                                     </ul>
                                 
@@ -875,7 +746,7 @@
                             </div>
 
                             
-                                <div class="tab-pane" id="_article__edition__v1__uri___get_response">
+                                <div class="tab-pane" id="_article__edition__v1__articleUri___get_response">
                                     
                                         <h2>HTTP status code 200</h2>
                                         
@@ -1017,7 +888,7 @@
                 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h3 id="_video" class="panel-title">/video</h3>
+                            <h3 id="_healthcheck" class="panel-title">/healthcheck</h3>
                         </div>
 
                         <div class="panel-body">
@@ -1027,125 +898,116 @@
                                 <div class="panel panel-white">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__video">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__healthcheck">
                 
-                <span class="parent"></span>/video
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent"></span>/healthcheck
             </a>
         </h4>
     </div>
-    <div id="panel__video" class="panel-collapse collapse">
+    <div id="panel__healthcheck" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_healthcheck_get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Request the status of a pal instance. Provides the same response as /_config.
+                    </a>
                 
             </div>
         </div>
     </div>
 
     
+        <div class="modal fade" id="_healthcheck_get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent"></span>/healthcheck
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Request the status of a pal instance. Provides the same response as /_config.</p>
 </div>
 
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_healthcheck_get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_healthcheck_get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
 
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_healthcheck_get_request">
+                                
 
+                                
+
+                                
                             </div>
+
+                            
+                                <div class="tab-pane" id="_healthcheck_get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  &quot;name&quot;: &quot;pal-server&quot;,
+  &quot;version&quot;: &quot;0.123.16-651&quot;,
+  &quot;uptime&quot;: 510716465,
+  &quot;env&quot;: {
+    &quot;COUCHDB_URL&quot;: &quot;http://10.60.162.43:5984,http://10.60.162.44:5984&quot;,
+    &quot;LOGTOP&quot;: &quot;/var/log&quot;,
+    &quot;CUSTOMER&quot;: &quot;CNN&quot;,
+    &quot;OLDPWD&quot;: &quot;/etc/sv/cnn-pal&quot;,
+    &quot;USER&quot;: &quot;www-data&quot;,
+    &quot;STATIC_FILE_URL&quot;: &quot;http://cnn-static-domestic.stage.56m.dmtio.net&quot;,
+    &quot;REDIS_URL&quot;: &quot;http://10.60.162.41:6379,http://10.60.162.42:64001&quot;,
+    &quot;SERIAL&quot;: &quot;b2fee31e-3d71-ec9c-cfb0-aeef6788b7cf&quot;,
+    &quot;PRODTOP&quot;: &quot;/opt&quot;,
+    &quot;PACKAGE_SIZE&quot;: &quot;2x4x32-kvm&quot;,
+    &quot;OWNER&quot;: &quot;ictops&quot;,
+    &quot;PATH&quot;: &quot;/opt/cnn-pal/current/bin:/usr/local/bin:/usr/local/bin:/usr/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin&quot;,
+    &quot;PWD&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;HEALTHCHECK&quot;: &quot;/healthcheck&quot;,
+    &quot;ENVIRONMENT&quot;: &quot;stage&quot;,
+    &quot;HOME&quot;: &quot;/opt/cnn-pal/current&quot;,
+    &quot;SHLVL&quot;: &quot;0&quot;,
+    &quot;CONFTAG&quot;: &quot;PROD&quot;,
+    &quot;CHASSIS&quot;: &quot;SDC_VIRTUAL&quot;,
+    &quot;PRODUCT&quot;: &quot;cnn-pal&quot;,
+    &quot;TYPE&quot;: &quot;deployit&quot;,
+    &quot;PORT&quot;: &quot;5000&quot;,
+    &quot;IBIS_URL&quot;: &quot;http://cnn-ibis.stage.56m.dmtio.net&quot;,
+    &quot;LOCATION&quot;: &quot;56m&quot;,
+    &quot;DEBUG&quot;: &quot;pal-server*&quot;
+  },
+  &quot;ttl&quot;:&quot;60000 ms&quot;
+}
+</pre>
+                                            
+                                        
+                                    
+                                </div>
+                            
                         </div>
                     </div>
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 id="_videos" class="panel-title">/videos</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            
-
-                            <div class="panel-group">
-                                <div class="panel panel-white">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__videos">
-                
-                <span class="parent"></span>/videos
-            </a>
-        </h4>
-    </div>
-    <div id="panel__videos" class="panel-collapse collapse">
-        <div class="panel-body">
-            <div class="list-group">
-                
+                </div>
             </div>
         </div>
-    </div>
-
-    
-</div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 id="_profile" class="panel-title">/profile</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            
-
-                            <div class="panel-group">
-                                <div class="panel panel-white">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__profile">
-                
-                <span class="parent"></span>/profile
-            </a>
-        </h4>
-    </div>
-    <div id="panel__profile" class="panel-collapse collapse">
-        <div class="panel-body">
-            <div class="list-group">
-                
-            </div>
-        </div>
-    </div>
-
-    
-</div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 id="_section" class="panel-title">/section</h3>
-                        </div>
-
-                        <div class="panel-body">
-                            
-
-                            <div class="panel-group">
-                                <div class="panel panel-white">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__section">
-                
-                <span class="parent"></span>/section
-            </a>
-        </h4>
-    </div>
-    <div id="panel__section" class="panel-collapse collapse">
-        <div class="panel-body">
-            <div class="list-group">
-                
-            </div>
-        </div>
-    </div>
-
     
 </div>
 
@@ -1185,6 +1047,385 @@
 </div>
 
 
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__list__edition__v1__listUri_">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/list</span>/{edition}/v1/{listUri}
+            </a>
+        </h4>
+    </div>
+    <div id="panel__list__edition__v1__listUri_" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_list__edition__v1__listUri__get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Request a template model for a list (topic) object.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_list__edition__v1__listUri__get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/list</span>/{edition}/v1/{listUri}
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Request a template model for a list (topic) object.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_list__edition__v1__listUri__get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_list__edition__v1__listUri__get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_list__edition__v1__listUri__get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>listUri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_list__edition__v1__listUri__get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_profile" class="panel-title">/profile</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__profile">
+                
+                <span class="parent"></span>/profile
+            </a>
+        </h4>
+    </div>
+    <div id="panel__profile" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__profile__edition__v1__profileUri_">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/profile</span>/{edition}/v1/{profileUri}
+            </a>
+        </h4>
+    </div>
+    <div id="panel__profile__edition__v1__profileUri_" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_profile__edition__v1__profileUri__get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Request a template model for a profile object.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_profile__edition__v1__profileUri__get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/profile</span>/{edition}/v1/{profileUri}
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Request a template model for a profile object.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_profile__edition__v1__profileUri__get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_profile__edition__v1__profileUri__get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_profile__edition__v1__profileUri__get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>profileUri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_profile__edition__v1__profileUri__get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 id="_section" class="panel-title">/section</h3>
+                        </div>
+
+                        <div class="panel-body">
+                            
+
+                            <div class="panel-group">
+                                <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__section">
+                
+                <span class="parent"></span>/section
+            </a>
+        </h4>
+    </div>
+    <div id="panel__section" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__section__edition__v1__sectionName_">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/section</span>/{edition}/v1/{sectionName}
+            </a>
+        </h4>
+    </div>
+    <div id="panel__section__edition__v1__sectionName_" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_section__edition__v1__sectionName__get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Request a template model for a section object.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_section__edition__v1__sectionName__get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/section</span>/{edition}/v1/{sectionName}
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Request a template model for a section object.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_section__edition__v1__sectionName__get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_section__edition__v1__sectionName__get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_section__edition__v1__sectionName__get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>sectionName</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_section__edition__v1__sectionName__get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
 
                             </div>
                         </div>
@@ -1220,6 +1461,109 @@
 </div>
 
 
+    <div class="panel panel-white">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__show__edition__v1__showUri_">
+                
+                    <span class="badge badge_get">get</span>
+                
+                <span class="parent">/show</span>/{edition}/v1/{showUri}
+            </a>
+        </h4>
+    </div>
+    <div id="panel__show__edition__v1__showUri_" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="list-group">
+                
+                    <a href="#" data-toggle="modal" data-target="#_show__edition__v1__showUri__get" class="list-group-item">
+                        <span class="badge badge_get">get</span>
+                        Request a template model for a show object.
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="modal fade" id="_show__edition__v1__showUri__get">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <span class="badge badge_get">get</span>
+                            <span class="parent">/show</span>/{edition}/v1/{showUri}
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-info"><p>Request a template model for a show object.</p>
+</div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#_show__edition__v1__showUri__get_request" data-toggle="tab">Request</a></li>
+                            
+                                <li><a href="#_show__edition__v1__showUri__get_response" data-toggle="tab">Response</a></li>
+                            
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="_show__edition__v1__showUri__get_request">
+                                
+                                    <h3>URI Parameters</h3>
+                                    <ul>
+                                        
+                                            <li><strong>edition</strong>: string</li>
+                                        
+                                            <li><strong>showUri</strong>: string</li>
+                                        
+                                    </ul>
+                                
+
+                                
+
+                                
+                            </div>
+
+                            
+                                <div class="tab-pane" id="_show__edition__v1__showUri__get_response">
+                                    
+                                        <h2>HTTP status code 200</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 404</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                        <h2>HTTP status code 500</h2>
+                                        
+
+                                        
+
+                                        
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+
+
+
 
                             </div>
                         </div>
@@ -1233,19 +1577,15 @@
                         
                             <li><a href="#__config">/_config</a></li>
                         
-                            <li><a href="#_healthcheck">/healthcheck</a></li>
-                        
                             <li><a href="#_article">/article</a></li>
                         
-                            <li><a href="#_video">/video</a></li>
+                            <li><a href="#_healthcheck">/healthcheck</a></li>
                         
-                            <li><a href="#_videos">/videos</a></li>
+                            <li><a href="#_list">/list</a></li>
                         
                             <li><a href="#_profile">/profile</a></li>
                         
                             <li><a href="#_section">/section</a></li>
-                        
-                            <li><a href="#_list">/list</a></li>
                         
                             <li><a href="#_show">/show</a></li>
                         
