@@ -45,7 +45,7 @@ version: v1
                 "ttl":"60000 ms"
               }
 /article:
-    /{edition}/v1/videos/{articleUri}/:
+    /{edition}/v1/videos/{videoUri}/:
       get:
         description: Request a template model for a video object.
         responses:
@@ -102,6 +102,7 @@ version: v1
                     sourceName: "CNN",
                     pageOhDear: {}
                   }
+                schema:
           404:
             body:
               application/json:
@@ -387,8 +388,99 @@ version: v1
       description: Request a template model for a list (topic) object.
       responses:
         200:
+          body:
+            application/json:
+              example: |
+                {
+                  adType: "",
+                  ads: {},
+                  analytics: {},
+                  autoStartVideo: false,
+                  background: {},
+                  branding: {},
+                  byline: "",
+                  bylineLabel: "",
+                  canonicalUrl: "http://www.cnn.com/health/be-healthy",
+                  currentVideoCollection: [ ],
+                  dateCreated: "",
+                  description: "",
+                  descriptionText: [ ],
+                  edition: "domestic",
+                  env: "local",
+                  firstPublishDate: "2014-01-20T16:14:10Z",
+                  lastPublishDate: "2014-04-18T17:49:03Z",
+                  lastPublishDateFormatted: "12:49 PM ET, Fri April 18, 2014",
+                  lastPublishDateHKFormatted: "",
+                  layout: "no-rail",
+                  livefyre: {},
+                  logo: { },
+                  metaImage: "",
+                  metaKeywords: "health",
+                  nav: {},
+                  ogType: "website",
+                  pageContents: [],
+                  pageTheme: "",
+                  pageType: "special",
+                  partner: { },
+                  schemaVersion: 2,
+                  sectionName: "health",
+                  seoTitle: "",
+                  show: "",
+                  showName: "",
+                  showUrl: "",
+                  socialCommenting: false,
+                  socialLogin: false,
+                  socialNewsfeed: false,
+                  socialSharebar: false,
+                  socialTrending: false,
+                  status: 200,
+                  title: "",
+                  type: "page",
+                  videoIdForOg: "",
+                  pageOhDear: {}
+                }
         404:
+          body:
+            application/json:
+              example: |
+                {
+                  status: 404,
+                  key: "/health/be-healthy-1/index.html",
+                  message: "File not found",
+                  responseMilliSeconds: 427,
+                  type: "page",
+                  env: "local",
+                  edition: "domestic",
+                  location: "",
+                  description: "",
+                  layout: "no-rail",
+                  pageType: "section",
+                  sectionName: "",
+                  seoTitle: "",
+                  editorialSource: "",
+                  nav: {}
+                }
         500:
+          body:
+            application/json:
+              example: |
+                {
+                  status: 500,
+                  key: "/health/be-healthy-1/index.html",
+                  message: "Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND ",
+                  responseMilliSeconds: 31,
+                  type: "page",
+                  env: "local",
+                  edition: "domestic",
+                  location: "",
+                  description: "",
+                  layout: "no-rail",
+                  pageType: "section",
+                  sectionName: "",
+                  seoTitle: "",
+                  editorialSource: "",
+                  nav: {}
+                }
 /profile:
   /{edition}/v1/{profileUri}:
     get:

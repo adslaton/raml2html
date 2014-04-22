@@ -272,19 +272,19 @@
     <div class="panel panel-white">
     <div class="panel-heading">
         <h4 class="panel-title">
-            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__articleUri__">
+            <a class="block collapsed" data-toggle="collapse" href="#panel__article__edition__v1_videos__videoUri__">
                 
                     <span class="badge badge_get">get</span>
                 
-                <span class="parent">/article</span>/{edition}/v1/videos/{articleUri}/
+                <span class="parent">/article</span>/{edition}/v1/videos/{videoUri}/
             </a>
         </h4>
     </div>
-    <div id="panel__article__edition__v1_videos__articleUri__" class="panel-collapse collapse">
+    <div id="panel__article__edition__v1_videos__videoUri__" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="list-group">
                 
-                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__articleUri___get" class="list-group-item">
+                    <a href="#" data-toggle="modal" data-target="#_article__edition__v1_videos__videoUri___get" class="list-group-item">
                         <span class="badge badge_get">get</span>
                         Request a template model for a video object.
                     </a>
@@ -294,14 +294,14 @@
     </div>
 
     
-        <div class="modal fade" id="_article__edition__v1_videos__articleUri___get">
+        <div class="modal fade" id="_article__edition__v1_videos__videoUri___get">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title" id="myModalLabel">
                             <span class="badge badge_get">get</span>
-                            <span class="parent">/article</span>/{edition}/v1/videos/{articleUri}/
+                            <span class="parent">/article</span>/{edition}/v1/videos/{videoUri}/
                         </h4>
                     </div>
                     <div class="modal-body">
@@ -310,22 +310,22 @@
 
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#_article__edition__v1_videos__articleUri___get_request" data-toggle="tab">Request</a></li>
+                            <li class="active"><a href="#_article__edition__v1_videos__videoUri___get_request" data-toggle="tab">Request</a></li>
                             
-                                <li><a href="#_article__edition__v1_videos__articleUri___get_response" data-toggle="tab">Response</a></li>
+                                <li><a href="#_article__edition__v1_videos__videoUri___get_response" data-toggle="tab">Response</a></li>
                             
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div class="tab-pane active" id="_article__edition__v1_videos__articleUri___get_request">
+                            <div class="tab-pane active" id="_article__edition__v1_videos__videoUri___get_request">
                                 
                                     <h3>URI Parameters</h3>
                                     <ul>
                                         
                                             <li><strong>edition</strong>: string</li>
                                         
-                                            <li><strong>articleUri</strong>: string</li>
+                                            <li><strong>videoUri</strong>: string</li>
                                         
                                     </ul>
                                 
@@ -336,7 +336,7 @@
                             </div>
 
                             
-                                <div class="tab-pane" id="_article__edition__v1_videos__articleUri___get_response">
+                                <div class="tab-pane" id="_article__edition__v1_videos__videoUri___get_response">
                                     
                                         <h2>HTTP status code 200</h2>
                                         
@@ -1122,6 +1122,60 @@
                                         
 
                                         
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  adType: &quot;&quot;,
+  ads: {},
+  analytics: {},
+  autoStartVideo: false,
+  background: {},
+  branding: {},
+  byline: &quot;&quot;,
+  bylineLabel: &quot;&quot;,
+  canonicalUrl: &quot;http://www.cnn.com/health/be-healthy&quot;,
+  currentVideoCollection: [ ],
+  dateCreated: &quot;&quot;,
+  description: &quot;&quot;,
+  descriptionText: [ ],
+  edition: &quot;domestic&quot;,
+  env: &quot;local&quot;,
+  firstPublishDate: &quot;2014-01-20T16:14:10Z&quot;,
+  lastPublishDate: &quot;2014-04-18T17:49:03Z&quot;,
+  lastPublishDateFormatted: &quot;12:49 PM ET, Fri April 18, 2014&quot;,
+  lastPublishDateHKFormatted: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  livefyre: {},
+  logo: { },
+  metaImage: &quot;&quot;,
+  metaKeywords: &quot;health&quot;,
+  nav: {},
+  ogType: &quot;website&quot;,
+  pageContents: [],
+  pageTheme: &quot;&quot;,
+  pageType: &quot;special&quot;,
+  partner: { },
+  schemaVersion: 2,
+  sectionName: &quot;health&quot;,
+  seoTitle: &quot;&quot;,
+  show: &quot;&quot;,
+  showName: &quot;&quot;,
+  showUrl: &quot;&quot;,
+  socialCommenting: false,
+  socialLogin: false,
+  socialNewsfeed: false,
+  socialSharebar: false,
+  socialTrending: false,
+  status: 200,
+  title: &quot;&quot;,
+  type: &quot;page&quot;,
+  videoIdForOg: &quot;&quot;,
+  pageOhDear: {}
+}
+</pre>
+                                            
+                                        
                                     
                                         <h2>HTTP status code 404</h2>
                                         
@@ -1129,12 +1183,58 @@
                                         
 
                                         
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 404,
+  key: &quot;/health/be-healthy-1/index.html&quot;,
+  message: &quot;File not found&quot;,
+  responseMilliSeconds: 427,
+  type: &quot;page&quot;,
+  env: &quot;local&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
+                                        
                                     
                                         <h2>HTTP status code 500</h2>
                                         
 
                                         
 
+                                        
+                                            <h3>Body</h3>
+                                            
+                                                <p><strong>Type: application/json</strong></p>
+                                                <pre>{
+  status: 500,
+  key: &quot;/health/be-healthy-1/index.html&quot;,
+  message: &quot;Pal-Server fetchContent error: Ibis Search request error Error: getaddrinfo ENOTFOUND &quot;,
+  responseMilliSeconds: 31,
+  type: &quot;page&quot;,
+  env: &quot;local&quot;,
+  edition: &quot;domestic&quot;,
+  location: &quot;&quot;,
+  description: &quot;&quot;,
+  layout: &quot;no-rail&quot;,
+  pageType: &quot;section&quot;,
+  sectionName: &quot;&quot;,
+  seoTitle: &quot;&quot;,
+  editorialSource: &quot;&quot;,
+  nav: {}
+}
+</pre>
+                                            
                                         
                                     
                                 </div>
