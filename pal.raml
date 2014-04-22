@@ -385,7 +385,7 @@ version: v1
 /list:
   /{edition}/v1/{listUri}:
     get:
-      description: Request a template model for a list (topic) object.
+      description: Request a template model for a list (topic) object. Includes subsections and some specials objects.
       responses:
         200:
           body:
@@ -490,9 +490,9 @@ version: v1
         404:
         500:
 /section:
-  /{edition}/v1/{sectionName}:
+  /{edition}/v1/{sectionUri}:
     get:
-      description: Request a template model for a section object.
+      description: Request a template model for a section object and some specials object.
       responses:
         200:
         404:
