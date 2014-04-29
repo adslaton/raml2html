@@ -16,18 +16,83 @@ baseUri: http://67.225.147.149:8888
                 uptime: 34270344
               }
 /v2:
-  /{queryType}/json/{key}:
-        get:
-          description: Request a dataset. Supported queryTypes values are account and category. Where the responseType is JSON and the key is the database field to query against. *NOTE* For testing purposes will return the entire data set for account and category.
-          responses:
-            200:
-              body:
-                application/json:
-                  example: |
+  /account/json/{key}/:
+    get:
+      description: Request an account dataset where the response type is JSON and the key is the database field to query against.
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  error: null,
+                  key: "sample",
+                  rows: [
                     {
-                      error: null,
-                      key: "sample",
-                      rows: []
+                      AccountNum: "0000002",
+                      alpha_search_key: "BANQUET",
+                      status: "A",
+                      Company: "Virginia Beach Sports Club",
+                      sales_region: "11",
+                      addr1: "219 70th Street",
+                      addr2: "",
+                      Addr3: "",
+                      City: "Virginia Beach",
+                      State: "VA",
+                      Zip: "23451",
+                      main_acct: "Y",
+                      prod_desc_long: null,
+                      group_code: null,
+                      group_desc: null,
+                      main_phone: "757-422-0980",
+                      main_fax: null,
+                      Web: null,
+                      Email: null,
+                      Note_Code: null,
+                      Note_Code2: null,
+                      rep_code: "00030805",
+                      member_desig: "0",
+                      PRIVILEGED: "0",
+                      prod_grp: null,
+                      org_code: "10",
+                      class: "O",
+                      EV870_UPD_STAMP: "2014-01-23T10:08:07.570Z",
+                      EV870_KEYWORD_2: "",
+                      CR125_PROD_TYPE: null,
+                      geocode: "",
+                      CR123_CAT_DESC: null
                     }
-          
-  
+                  ]
+                }
+  /category/json/{key}/:
+    get:
+      description: Request a category dataset where the response type is JSON. *NOTE - key is just a placeholder until further notice.*
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  error: null,
+                  key: "0000002",
+                  rows: [
+                    {
+                      acct_code: "0000002",
+                      org_code: "10",
+                      prefix: "",
+                      first_name: "",
+                      last_name: "",
+                      title: "",
+                      email_address: null,
+                      main_phone: "757-422-0980",
+                      company_name: "Virginia Beach Sports Club",
+                      address_l1: "219 70th Street",
+                      address_l2: "",
+                      city: "Virginia Beach",
+                      state: "VA",
+                      zip: "23451",
+                      country: "***",
+                      mobile: null
+                    }
+                  ]
+                }
