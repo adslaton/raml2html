@@ -1,0 +1,38 @@
+#%RAML 0.8
+title: MASS
+baseUri: http://67.225.147.149:8888
+
+/_healthcheck:
+  get:
+    description: Request the status of the service.
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                name: "mass-api",
+                version: "0.0.2",
+                uptime: 34270344
+              }
+/v2:
+  /{queryType}:
+    description: The query type. Supported query types are account and category.
+    /{responseType}:
+      description: The query response type. Currently only JSON is supported.
+      /{key}:
+        description: The database key field to query against. *NOTE* For testing purposes will return the entire data set for account and category.
+        get:
+          description: Request a dataset
+          responses:
+            200:
+              body:
+                application/json:
+                  example: |
+                    {
+                      error: null,
+                      key: "sample",
+                      rows: []
+                    }
+          
+  
