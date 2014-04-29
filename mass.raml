@@ -16,14 +16,9 @@ baseUri: http://67.225.147.149:8888
                 uptime: 34270344
               }
 /v2:
-  /{queryType}:
-    description: The query type. Supported query types are account and category.
-    /{responseType}:
-      description: The query response type. Currently only JSON is supported.
-      /{key}:
-        description: The database key field to query against. *NOTE* For testing purposes will return the entire data set for account and category.
+  /{queryType}/json/{key}:
         get:
-          description: Request a dataset
+          description: Request a dataset. Supported queryTypes values are account and category. Where the responseType is JSON and the key is the database field to query against. *NOTE* For testing purposes will return the entire data set for account and category.
           responses:
             200:
               body:
